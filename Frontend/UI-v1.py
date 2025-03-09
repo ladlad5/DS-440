@@ -2,6 +2,8 @@ import streamlit as st
 
 if 'messages' not in st.session_state:
     st.session_state.messages = []
+if 'patient_info' not in st.session_state:
+    st.session_state.patient_info = None
 
 def generate_response(user_input):
     return f"This is a response to: {user_input}" 
@@ -45,6 +47,32 @@ st.markdown(
 )
 
 st.markdown("<h2 style='text-align: center;'>MediHelp</h2>", unsafe_allow_html=True)
+
+st.markdown("<h3 style='color: white;'>Patient Information</h3>", unsafe_allow_html=True)
+with st.form(key="patient_form", clear_on_submit=True):
+    col1, col2 = st.columns(2)
+    with col1:
+         patient_id = st.text_input("Enter Patient ID:")
+    submitted_patient = st.form_submit_button("Submit Patient ID")
+
+if submitted_patient and patient_id:
+    if patient_id == "123":
+         patient_name = "John Doe"
+         patient_age = "30"
+    else:
+         patient_name = "Jane Smith"
+         patient_age = "40"
+    st.session_state.patient_info = {"id": patient_id, "name": patient_name, "age": patient_age}
+
+if st.session_state.patient_info:
+    col1, col2 = st.columns(2)
+    with col1:
+         st.markdown(f"<p style='color: white;'>Patient Name: {st.session_state.patient_info['name']}</p>", unsafe_allow_html=True)
+    with col2:
+         st.markdown(f"<p style='color: white;'>Patient Age: {st.session_state.patient_info['age']}</p>", unsafe_allow_html=True)
+
+if st.button("Clear Chat History"):
+    st.session_state.messages = []
 
 with st.container():
     for msg in st.session_state.messages:
