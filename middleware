@@ -27,6 +27,9 @@ if __name__ == "__main__":
     app.run()
 
 
+### Need to run code above first to get link
+
+
 fetch("https://xxxxx.ngrok.io/api/predict", {  // Use the ngrok URL
     method: "POST",
     headers: {
