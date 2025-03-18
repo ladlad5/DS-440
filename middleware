@@ -1,16 +1,20 @@
+!pip install flask flask-cors requests flask-ngrok
+
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-import requests  # If needed to call external APIs
+from flask_ngrok import run_with_ngrok  # Enables Flask to work in Google Colab
+import requests
 
 app = Flask(__name__)
 CORS(app)
+run_with_ngrok(app)  # Use ngrok to create a public URL
 
 @app.route("/api/predict", methods=["POST"])
 def predict():
     try:
         data = request.get_json()
 
-        # Placeholder: Integrate PyTorch/TensorFlow model here
+        # Placeholder: You can integrate PyTorch/TensorFlow model here
         prediction = {"message": "Processed data successfully", "input": data}
 
         return jsonify(prediction)
@@ -18,12 +22,12 @@ def predict():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
+# Start the Flask server
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run()
 
-python app.py
 
-fetch("http://localhost:5000/api/predict", {
+fetch("https://xxxxx.ngrok.io/api/predict", {  // Use the ngrok URL
     method: "POST",
     headers: {
         "Content-Type": "application/json",
@@ -33,3 +37,8 @@ fetch("http://localhost:5000/api/predict", {
 .then(response => response.json())
 .then(data => console.log(data))
 .catch(error => console.error("Error:", error));
+
+
+
+
+
