@@ -1,11 +1,26 @@
 import streamlit as st
-
+from ollama import chat
+from ollama import ChatResponse
+import re
 if 'messages' not in st.session_state:
     st.session_state.messages = []
 if 'patient_info' not in st.session_state:
     st.session_state.patient_info = None
 
 def generate_response(user_input):
+    st.toast('Generating response')
+    with st.spinner("Generating response", show_time=True):
+        response: ChatResponse = chat(model='deepseek-r1:1.5b', messages=[
+    {
+        'role': 'user',
+        'content': user_input,
+    },
+        ])
+        response_text = response['message']['content']
+        think_texts = re.findall(r"<think>(.*?)</think>", response_text, flags=re.DOTALL) #extracts deep_think
+        think_texts = "\n\n".join(think_texts).strip() 
+        clean_response = re.sub(r"<think>.*?</think>", '', response_text, flags = re.DOTALL).strip()
+        return clean_response
     return f"This is a response to: {user_input}" 
 
 st.set_page_config(page_title="MediHelp", layout="wide")
