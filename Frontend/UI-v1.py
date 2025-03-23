@@ -11,6 +11,7 @@ def generate_response(user_input):
     st.toast('Generating response')
     with st.spinner("Generating response", show_time=True):
         response: ChatResponse = chat(model='deepseek-r1:1.5b', messages=[
+            {'role' : 'system', 'content' : f"you are Medihelp. A chatbot created to help medical personnel edit and create medical reports for patients."},
     {
         'role': 'user',
         'content': user_input,
