@@ -4,6 +4,9 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 from flask_ngrok import run_with_ngrok  # Enables Flask to work in Google Colab
 import requests
+from ollama import chat
+from ollama import ChatResponse
+import re
 
 app = Flask(__name__)
 CORS(app)
@@ -13,9 +16,19 @@ CORS(app)
 def predict():
     try:
         data = request.get_json()
-
         # Placeholder: You can integrate PyTorch/TensorFlow model here
-        prediction = {"message": "Processed data successfully middleware test", "input": data}
+        response: ChatResponse = chat(model='deepseek-r1:1.5b', messages=[
+            {'role' : 'system', 'content' : f"you are Medihelp. A chatbot created to help medical personnel edit and create medical reports for patients."},
+    {
+        'role': 'user',
+        'content': data
+    },
+        ])
+        response_text = response['message']['content']
+        think_texts = re.findall(r"<think>(.*?)</think>", response_text, flags=re.DOTALL) #extracts deep_think
+        think_texts = "\n\n".join(think_texts).strip() 
+        clean_response = re.sub(r"<think>.*?</think>", '', response_text, flags = re.DOTALL).strip()
+        prediction = {"message": clean_response, "input": data}
 
         return jsonify(prediction)
 
