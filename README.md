@@ -1,3 +1,6 @@
+# MediHelp
+MediHelp is an AI chatbot for medical providers to use to turn medical notes into formatted medical reports. It is locally hosted to ensure security and utilized DeepSeek, an open source LLM.
+
 # Instructions:
 
 
