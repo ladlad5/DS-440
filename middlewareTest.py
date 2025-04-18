@@ -17,7 +17,7 @@ patientDB["Patient ID"] = patientDB.index
 
 if not st.session_state.logged_in:
     with st.form(key="login_form", clear_on_submit=True):
-        pin = st.text_input("Enter PIN:", type="password")
+        pin = st.text_input("Enter PIN: (0000 for testing purposes)", type="password")
         submitted_pin = st.form_submit_button("Login")
         if submitted_pin:
             if pin == "0000":
@@ -115,7 +115,7 @@ st.markdown("<h3 style='color: white;'>Patient Information</h3>", unsafe_allow_h
 with st.form(key="patient_form", clear_on_submit=True):
     col1, col2 = st.columns(2)
     with col1:
-         patient_id = st.text_input("Enter Patient ID:")
+         patient_id = st.text_input("Enter Patient ID: (for testing purposes, valid ID ranges are 1-999)")
     submitted_patient = st.form_submit_button("Submit Patient ID")
 
 if submitted_patient and patient_id:
