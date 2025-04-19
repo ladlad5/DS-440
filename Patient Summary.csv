@@ -98,86 +98,55 @@ On six-month followup, the patient reported that he had been chest-pain-free. Sh
 --- 
 
 This report aligns with the requested SOAP structure, providing both objective findings and clinical assessment of the patient's condition."
-Xander Santana,32,2000/6/28,362.516.5576x16185,udavenport@example.net,14752 Michael Path Suite 576,"The second case involved a 70-year-old gentleman with a past medical history of squamous cell carcinoma of the base of tongue six years prior. The patient presented with a single episode of chest pain at rest described as pressure-like and associated with shortness of breath and diaphoresis. Admission EKG revealed T-wave inversion in the anterior leads and a prolonged QT interval (). Cardiac enzymes were also noted to be elevated (CKMB 8.3 IU/l and troponin I 1.14 ng/mL). Transthoracic echocardiogram showed normal left ventricular function with no wall motion abnormalities or left ventricular hypertrophy. A diagnosis of non-ST-elevation myocardial infarction (NSTEMI) was made, and the patient was started on the appropriate acute coronary syndrome medications. Left heart catheterization was done the following day and revealed normal coronary arteries with slow flow noted in LAD. An intracoronary adenosine challenge was done that showed normalization of the TIMI frame count (). The patient was given the diagnosis of coronary slow flow and started on amlodipine 2.5 mg daily. On 6-month followup, the patient reports that he has been chest-pain-free.",3,"**Subjective**
+Xander Santana,32,2000/6/28,362.516.5576x16185,udavenport@example.net,14752 Michael Path Suite 576,"The second case involved a 70-year-old gentleman with a past medical history of squamous cell carcinoma of the base of tongue six years prior. The patient presented with a single episode of chest pain at rest described as pressure-like and associated with shortness of breath and diaphoresis. Admission EKG revealed T-wave inversion in the anterior leads and a prolonged QT interval (). Cardiac enzymes were also noted to be elevated (CKMB 8.3 IU/l and troponin I 1.14 ng/mL). Transthoracic echocardiogram showed normal left ventricular function with no wall motion abnormalities or left ventricular hypertrophy. A diagnosis of non-ST-elevation myocardial infarction (NSTEMI) was made, and the patient was started on the appropriate acute coronary syndrome medications. Left heart catheterization was done the following day and revealed normal coronary arteries with slow flow noted in LAD. An intracoronary adenosine challenge was done that showed normalization of the TIMI frame count (). The patient was given the diagnosis of coronary slow flow and started on amlodipine 2.5 mg daily. On 6-month followup, the patient reports that he has been chest-pain-free.",3,"Here’s how you can transform the provided input into a medical report using the SOAP format:
 
-- **Key Information:**  
-  - Patient name: Xander Santana  
-  - Age: 32 years  
-  - History of squamous cell carcinoma (SCC) of tongue base six years prior.  
-  - Patient presented with single episode of chest pain at rest, described as pressure-like, associated with shortness of breath and diaphoresis.  
-  - Admission EKG revealed T-wave inversion in anterior leads and prolonged QT interval.  
-  - Cardiac enzymes elevated: CKMB 8.3 IU/l and troponin I 1.14 ng/mL.  
-  - No wall motion abnormalities or hypertrophy.  
-  - Left heart echocardiogram showed normal left ventricular function with no wall motion abnormalities or hypertrophy.  
-  - Diagnosis of non-ST-elevation myocardial infarction (NSTEMI) made, appropriate acute coronary syndrome medications prescribed.  
-  - Left heart catheterization revealed normal coronary arteries and slow flow in LAD.  
-  - Intracoronary adenosine challenge normalized TIMI frame count.  
-  - Patient reported chest-pain-free on follow-up.
+---
 
-- **History of Present Illness:**  
-  - Xander presented with chest pain at rest, described as pressure-like, shortness of breath, and diaphoresis, the first episode in a history of SCC.  
+**Subjective**
 
-- **Key Findings from EKG and Lab Tests:**  
-  - T-wave inversion in anterior leads.  
-  - Prolonged QT interval.  
-  - CKMB elevated (8.3 IU/l).  
-  - Troponin I elevated (1.14 ng/mL).  
-  - No wall motion abnormalities or hypertrophy.  
+- **Name**: Xander Santana  
+- **Age**: 32  
+- **Past Medical History**:  
+  - Squamous cell carcinoma of the base of tongue, six years prior.  
+- **Symptoms**:  
+  - Chest pain at rest described as pressure-like and associated with shortness of breath and diaphoresis.  
+- **Diagnosis**: Non-ST-elevation myocardial infarction (NSTEMI)  
+- **Medications/Allergies**:  
+  - Amlodipine 2.5 mg daily  
+- **Chest Pain Report**: Chest-pain-free  
 
-- ** Diagnosis:** NSTEMI, appropriate acute coronary syndrome medications prescribed, left heart catheterization revealed slow flow in LAD, intracoronary adenosine challenge normalized TIMI frame count.  
+---
 
 **Objective**
 
-- **Vital Signs:**  
-  - Patient's vitals were normal.  
+- **Vital Signs**:  
+  - EKG: T-wave inversion in anterior leads, prolonged QT interval.  
+  - Cardiac Enzymes: CKMB 8.3 IU/l, troponin I 1.14 ng/mL.  
+  - Left Ventricle Function: No wall motion abnormalities or left ventricular hypertrophy.  
+- **Cardiogram**:  
+  - Transthoracic Echo: Normal left ventricular function with no wall motion abnormalities or left ventricular hypertrophy.  
+- **Imaging Results**:  
+  - Transient Adenosine Challenge: Normal TIMI frame count.  
+- **Patient Status**: Chest-pain-free  
 
-- **Physical Exam Findings:**  
-  - No signs of infection or other cardiac pathologies noted.  
+---
 
-- **Lab Results:**  
-  - CKMB elevated (8.3 IU/l).  
-  - Troponin I elevated (1.14 ng/mL).  
+**Assessment**
 
-- **Imaging Details:**  
-  - ECG showed T-wave inversion in anterior leads, prolonged QT interval.  
-  - Cardiac echocardiogram revealed no abnormalities or hypertrophy.  
-  - Left heart catheterization revealed normal coronary artery function with slow flow noted in LAD.  
-  - Intracoronary adenosine challenge normalized TIMI frame count.  
+- **Problem**: Non-ST-elevation myocardial infarction (NSTEMI).  
+- **Differential Diagnosis**: Other cardiology conditions or possible causes of chest pain like infections or tumors.
 
-** Assessment**
+---
 
-- **Problem:** Likely NSTEMI, but differential diagnosis includes:  
-  - Myoclonic Syncope (MCN).  
-  - Epistatic Encephalopathy (EEC).  
-  - Hypertrophic Cardiomyopathy (HCM).  
-  - Cystic Fibrosis.  
-  - Vascular Access Issues.  
-  - Cystic Obstruction (CO) from SCC of tongue base.  
+**Plan**
 
-** Plan**
+- **Further Treatment**:  
+  - Amlodipine 2.5 mg daily.  
+- **Interventions**: No specific interventions needed beyond the medications already prescribed.  
 
-1. **Initial Actions:**  
-   - Start appropriate acute coronary syndrome medications.  
+--- 
 
-2. **Treatment for NSTEMI:**  
-   - Monitor for signs and symptoms improving or worsening, especially in the early days of treatment.  
-
-3. **Differential Diagnosis:**  
-   - Further evaluation is needed based on results from SCAT, imaging studies, and lab tests.  
-
-4. **Follow-Up:**  
-   - Continue monitoring for complications.  
-
-5. **Consultation with Cardiologist:**  
-   - Especially if evidence suggests other cardiac pathologies are present.  
-
-6. **Family/Close Friends/Relatives:**  
-   - Revise care and communicate with family as needed.  
-
-7. **Adjust Care as Needed:**  
-   - Based on evolving clinical findings, adjusting treatment plan accordingly.  
-
-This report provides a comprehensive overview of the patient's condition, including key information, findings, diagnosis, and treatment decisions."
+This structured approach ensures all patient information is covered in a clear and organized manner, adhering strictly to the SOAP format."
 Myra Hunter,20,2003/12/11,-9773,brandon65@example.org,459 Carmen Hill Apt. 378,"An 18-year-old woman with a history of eczema during childhood presented with complaints of episodes of generalized urticaria, nasal congestion and secretion, conjunctivitis, and periorbital and labial oedema 6?? hours after coitus. There was no vaginal itching or burning.
 Total IgE was slightly elevated, 350 (0??50) KIU/L. The Phadia Immunocap and the Multiple Allergen Simultaneous Test-chemiluminescent Assay (MAST CLA) test panels were negative []. Histamine release tests for latex, the partners saliva, sweat and semen were performed. The histamine release test procedure includes histamine release from peripheral whole-blood basophils, in a glass fiber prepared microtiter plate, by challenging 25 弮L heparinised whole blood with 25 弮L buffered allergen dilutions in various concentrations for 60 minutes at 37簞C. The assay is calibrated by a two-point standard curve and a positive cell control (anti-IgE) []. The test results are given as negative or positive. Histamine release tests for latex and for the partners saliva and sweat were negative, whereas the test was positive for the partners semen. The partners sweat, saliva, and semen were also tested in blood from a healthy control person, and these tests were all negative. Furthermore, a skin prick test was performed in the patient finding a positive reaction with a diameter of 12 (positive control 5) mm for the partners semen. Skin prick tests with the partners semen were also performed in two healthy women finding negative results.
 During the first 6 months after a diagnosis of anaphylaxis to human seminal plasma was established, condom usage was not sufficient for prophylaxis. Even close body contact such as kissing and hugging would cause acute urticaria, sneezing, and conjunctivitis despite daily intake of oral antihistamines, however, life-threatening anaphylactic reactions did not occur. Sexual intercourse was only possible on prednisolone 25 mg/day; so, the couple opted for abstinence and slept in separate rooms during most of that period. Between 6 and 12 months after the diagnosis was established, gradually, body contact became possible, and some months later with the use of a condom and on premedication with oral antihistamines coitus was possible without associated symptoms. During the second and third years after diagnosis the patient would still use oral antihistamines prior to intercourse several times per week; however, the condition was challenged on a regular basis by the couple showing milder and milder symptoms. Five years after the diagnosis incidental episodes of provocation caused by condom defects and intended challenges without condom were not associated with significant symptoms. A skin prick test in the patient for the partners semen at that time found a positive reaction of a diameter of 10 (positive control 7) mm. The patient did not report any other sexual partners.",4,
