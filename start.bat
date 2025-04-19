@@ -25,7 +25,7 @@ REM ──── Launch Flask API (middlewaredeepseek) ────────�
 start "Flask Server" cmd /k "python middlewaredeepseek.py"
 
 REM ──── Launch Streamlit App (middlewareTest) ──────────────────────────
-start "Streamlit App" cmd /k "python -m streamlit run middlewareTest.py --server.headless false"
+start "Streamlit App" cmd /k "python -m streamlit run middlewareTest.py --server.headless false --theme.base dark"
 
 REM ──── Keep this window open ──────────────────────────────────────────
 pause
