@@ -3,6 +3,11 @@ MediHelp is an AI chatbot for medical providers to use to turn medical notes int
 
 # Instructions:
 
+## Local Hosting
+
+## Azure Hosted Alternative:
+There is also an azure hosted alternative for demonstration purposes in case the code is not running on your machine. Please note performance will be slower than running a local host on a GPU machine:
+https://ladlad5-ds-440-middlewaretestremote-sk8ifn.streamlit.app/
 
 
 
